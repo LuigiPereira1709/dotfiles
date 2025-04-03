@@ -1,0 +1,290 @@
+{
+	"spacing": 0,
+	"layer": "top",
+	"margin-top": 5,
+	"margin-left": 10,
+	"margin-right": 10,
+	"modules-left": [
+		"hyprland/workspaces",
+		"hyprland/window"
+	],
+	"modules-center": [
+		"clock",
+		"custom/recorder"
+	],
+	"modules-right": [
+		"tray",
+		"custom/sep",
+		// "idle_inhibitor",
+		// "custom/sep",
+		"custom/notification",
+		"custom/sep",
+		"custom/power_profile",
+		"custom/sep",
+		"group/brightnessg",
+		"custom/sep",
+    "group/pulseaudio",
+		// "pulseaudio",
+		// "pulseaudio/slider",
+		"custom/sep",
+		"network",
+		"custom/sep",
+    "cpu",
+		"custom/sep",
+		"battery",
+		"custom/sep",
+		"custom/session",
+		"custom/space"
+	],
+	"custom/sep": {
+		"format": " | "
+	},
+	"custom/space": {
+		"format": "     "
+	},
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "",
+			"deactivated": ""
+		}
+	},
+	"group/brightnessg": {
+		"orientation": "horizontal",
+		"drawer": {
+			"transition-duration": 600,
+			"children-class": "brightnessg",
+			"transition-to-left": true,
+			"click-to-reveal": false
+		},
+		"modules": [
+			"backlight",
+			"backlight/slider"
+		]
+	},
+	"group/pulseaudio": {
+		"orientation": "horizontal",
+		"drawer": {
+			"transition-duration": 600,
+			"children-class": "pulseaudiog",
+			"transition-to-left": true,
+			"click-to-reveal": false
+		},
+		"modules": [
+			"pulseaudio",
+			"pulseaudio/slider"
+		]
+	},
+	"custom/recorder": {
+		"format": "‎⭕‎",
+		"return-type": "json",
+		"interval": 1,
+		"exec": "echo '{\"class\": \"recording\"}'",
+		"exec-if": "pgrep wf-recorder",
+		"on-click": "killall -s SIGINT wf-recorder"
+	},
+	"custom/notification": {
+		"tooltip": true,
+		"format": "{icon} ",
+		"format-icons": {
+			"notification": "",
+			"none": "",
+			"dnd-notification": "",
+			"dnd-none": ""
+		},
+		"return-type": "json",
+		"exec-if": "which swaync-client",
+		"exec": "swaync-client -swb",
+		"on-click": "swaync-client -t -sw",
+		"on-click-right": "swaync-client -d -sw",
+		"escape": true
+	},
+	"custom/session": {
+		"format": "{icon}",
+		"format-icons": {
+			"default": " 💀   "
+		},
+		"toolip": true,
+		"on-click": "wlogout -p layer-shell"
+	},
+	"backlight": {
+		// "format": "{percent}% {icon} ",
+		"format": "{icon} ",
+		"format-icons": [
+			"󰃞",
+			"󰃝",
+			"󰃟",
+			"󰃠"
+		],
+		"backlight/slider": {
+			"min": 1,
+			"max": 100,
+			"rotate": 0,
+			"scroll-step": 1
+		}
+	},
+	"hyprland/workspaces": {
+		"disable-scroll": true,
+		"all-outputs": true,
+		"on-click": "activate",
+		"format": "{icon}",
+		"format-icons": {
+			"1": "I",
+			"2": "II",
+			"3": "III",
+			"4": "IV",
+			"5": "V",
+			"6": "VI",
+			"7": "VII",
+			"8": "VIII",
+			"9": "IX",
+			"urgent": ""
+		}
+	},
+	"mwlr/workspaces": {
+		"disable-scroll": true,
+		"on-click": "activate",
+		"format": "{icon}",
+		"all-outputs": false,
+		"persistent_workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": [],
+			"6": [],
+			"7": [],
+			"8": [],
+			"9": [],
+			"10": []
+		},
+		"format-icons": {
+			"1": "I",
+			"2": "II",
+			"3": "III",
+			"4": "IV",
+			"5": "V",
+			"6": "VI",
+			"7": "VII",
+			"8": "VIII",
+			"9": "IX",
+			"10": "X",
+			"urgent": ""
+		}
+	},
+	"xwlr/workspaces": {
+		"all-outputs": true,
+		"on-click": "activate",
+		"format": "{icon}",
+		"format-icons": {
+			"1": "",
+			"2": "",
+			"3": "",
+			"4": "",
+			"5": "",
+			"urgent": "",
+			"active": "",
+			"default": ""
+		}
+	},
+	"tray": {
+		"spacing": 10
+	},
+	"clock": {
+		"format": "  {:%I:%M %p |  %d/%m/%Y  } ",
+		"interval": 60,
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+	},
+	"custom/bruh": {
+		"interval": 60,
+		"format": "{:  %A %d %b}"
+	},
+	"cpu": {
+		"format": " {usage}%",
+		"tooltip": false
+	},
+	"memory": {
+		"format": " {}%"
+	},
+	"hyprland/window": {
+		"format": "{title}",
+		"icon": true,
+		"icon-size": 16,
+		"max-length": 50,
+		"separate-outputs": true
+	},
+	"battery": {
+		"states": {
+			"good": 95,
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon}",
+		"format-charging": " {capacity}%",
+		"format-plugged": " {capacity}%",
+		"format-alt": "{icon}{time}",
+		"format-icons": [
+			"  ",
+			"  ",
+			"  ",
+			"  ",
+			"  "
+		]
+	},
+	"battery#bat2": {
+		"bat": "BAT2"
+	},
+	"custom/power_profile": {
+		"exec": "sleep 0.3 && /home/luigi/.scripts/powerprofilecycle.sh -m",
+		"interval": 1,
+		"on-click": "/home/luigi/.scripts/powerprofilecycle.sh",
+		"exec-on-event": true
+	},
+	"network": {
+		// "format-wifi": "  {essid}",
+		"format-wifi": "  private",
+		"format-ethernet": "  Connected",
+		"format-disconnected": " Disconnected",
+		"tooltip-format-wifi": " {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\n⬆️ {bandwidthUpBits} ⬇️ {bandwidthDownBits}",
+		"tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n⬆️ {bandwidthUpBits} ⬇️ {bandwidthDownBits}",
+		"format-linked": "{ifname} (No IP) ",
+		"on-click-right": "nm-connection-editor"
+	},
+	"pulseaudio": {
+		"format": "{volume}% {icon} {format_source} ",
+		"format-bluetooth": "{volume}%  {format_source} ",
+		"format-bluetooth-muted": "   {format_source} ",
+		"format-muted": " {format_source}",
+		"format-source": "{volume}%  ",
+		"format-source-muted": "  ",
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": [
+				"",
+				"",
+				""
+			]
+		},
+		"on-click": "pavucontrol-qt",
+		"pulseaudio/slider": {
+			"min": 0,
+			"max": 100,
+			"orientation": "horizontal"
+		}
+	},
+	"custom/media": {
+		"format": "{icon} {}",
+		"return-type": "json",
+		"max-length": 40,
+		"format-icons": {
+			"spotify": "",
+			"default": "🎜"
+		},
+		"escape": true
+	}
+}

@@ -1,0 +1,19 @@
+* {
+	/* Theme Colors */
+	bg: 		#141414;
+	bg2: 		#b34f6d;
+	
+	fg: 		#141414;
+	
+	transparent: 	rgba(0,0,0,0);
+	black:		rgba(17, 15, 26, 0.8);
+
+	love: 		  #b34f6d; /* love */
+	pine: 		#5e838f; /* pine */
+	gold: 	#cfcfbe; /* gold */
+	foam: 		#6a94a2; /* foam */
+	iris:	#a697c4; /* iris */
+	rose: 		#dbcad0; /* rose */
+}
+
+

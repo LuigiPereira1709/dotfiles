@@ -1,0 +1,10 @@
+bg: 0f161e
+fg: 0f161e 
+fga: 0f161e 
+
+gr: 0f161e 
+rd: 0f161e 
+pk: 0f161e 
+bl: 0f161e 
+yl: 0f161e 
+pl: 0f161e 

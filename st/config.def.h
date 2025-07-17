@@ -179,7 +179,8 @@ static unsigned int visualbellduration = 100;
 static unsigned int visualbellanimfps = 60;
 
 /* default TERM value */
-char *termname = "st-256color";
+// char *termname = "st-256color";
+char *termname = "tmux-256color";
 
 /*
  * spaces per tab

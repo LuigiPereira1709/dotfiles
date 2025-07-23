@@ -179,8 +179,7 @@ static unsigned int visualbellduration = 100;
 static unsigned int visualbellanimfps = 60;
 
 /* default TERM value */
-// char *termname = "st-256color";
-char *termname = "tmux-256color";
+char *termname = "xterm-256color";
 
 /*
  * spaces per tab
@@ -201,10 +200,10 @@ unsigned int tabspaces = 8;
 
 /* bg opacity */
 float alpha = 0.93;
-float alphaUnfocused = 0.6;
+float alphaUnfocused = 0.8;
 
 /* Terminal colors (16 first used in escape sequence) */
-/* Terminal colors (16 first used in escape sequence) */
+/* Rose pine */
 static const char *colorname[] = {
     /* 8 normal colors */
     "#110f1a", /* black  */
@@ -236,6 +235,39 @@ static const char *colorname[] = {
     "#18162b", /* 260 -> background unfocused */
     "#3e3a53", /* 261 -> visual bell */
 };
+
+// /* Kanagawa */
+// static const char *colorname[] = {
+//     /* 8 normal colors */
+//     "#111117", /* black  (sumiInk1) */
+//     "#8f3f49", /* red    (waveRed) */
+//     "#607747", /* green  (springGreen) */
+//     "#a56529", /* yellow (roninYellow) */
+//     "#4f5d87", /* blue   (crystalBlue) */
+//     "#5d4e75", /* magenta (oniViolet) */
+//     "#507066", /* cyan   (waveAqua2) */
+//     "#989483", /* white  (fujiWhite) */
+
+//     /* 8 bright colors */
+//     "#47463d", /* bright black (fujiGray) */
+//     "#a33b3e", /* bright red   (peachRed) */
+//     "#4b604a", /* bright green (autumnGreen) */
+//     "#8d794d", /* bright yellow (carpYellow) */
+//     "#637792", /* bright blue  (springViolet2) */
+//     "#746a93", /* bright magenta (oniViolet2) */
+//     "#678d8e", /* bright cyan   (lightBlue) */
+//     "#e0def4", /* bright white  (original cursor color) */
+
+//     [255] = 0,
+
+//     /* more colors can be added after 255 to use with DefaultXX */
+//     "#e0def4", /* 256 -> cursor */
+//     "#676385", /* 257 -> rev cursor */
+//     "#989483", /* 258 -> foreground (fujiWhite) */
+//     "#111117", /* 259 -> background (sumiInk1) */
+//     "#121218", /* 260 -> background unfocused (sumiInk2) */
+//     "#242432", /* 261 -> visual bell (sumiInk5) */
+// };
 
 /*
  * Default colors (colorname index)

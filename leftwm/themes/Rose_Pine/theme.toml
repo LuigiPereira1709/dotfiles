@@ -1,5 +1,0 @@
-border_width = 1
-margin = [ 10, 5, 10, 5 ]
-default_border_color = "#b34f6d"
-floating_border_color = "#b34f6d"
-focused_border_color = "#6a94a2"

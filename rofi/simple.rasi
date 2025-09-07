@@ -1,0 +1,72 @@
+configuration {
+	display-run: " ";
+	display-drun: "";
+	// font: "Terminess Nerd Font Regular 12";
+	font: "Iosevka Nerd Font Regular 12";
+  modes: "window,drun,run,ssh";
+}
+
+@import "colors"
+
+window {
+	fullscreen: true;
+	background-color: black/70%;
+  border-color: @transparent;
+	padding: 38% 30% 25% 30%;
+}
+
+inputbar {
+	background-color: @transparent;
+	text-color: @fg;
+  children: [prompt, entry];
+}
+
+prompt {
+	background-color: @transparent;
+	text-color: @gold;
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	border: 0;
+}
+
+entry {
+	background-color: @transparent;
+	text-color: @gold;
+	placeholder: "Search";
+	padding: 0.7em 0 0.7em 2;
+	border: 0;
+}
+
+listview {
+	background-color: @transparent;
+	cycle: false;
+  scrollbar: false;
+	dynamic: true;
+	padding: 0 0 0 0;
+	border: 0 0 0 0;
+	columns: 1;
+	spacing: 2;
+}
+
+textbox {
+  text-color: @gold;
+}
+
+element {
+	padding: 2px;
+	border: 0;
+}
+
+element.normal.normal {
+    background-color: @transparent;
+    text-color:       @gold;
+}
+
+element.selected.normal {
+    background-color: @gold;
+    text-color:       @fg;
+}
+
+element.alternate.normal {
+    background-color: @transparent;
+    text-color:       @gold;
+}

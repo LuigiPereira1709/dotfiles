@@ -1,0 +1,168 @@
+* {
+  /* `otf-font-awesome` is required to be installed for icons */
+  border: none;
+  font-family:
+    Product Sans,
+    FontAwesome,
+    JetBrainsMono Nerd Font;
+  font-size: 14px;
+  padding: 0;
+  /*margin: 0;*/
+  /* border-radius: 20px; */
+}
+
+window#waybar {
+  background: rgba(8, 8, 8, 0.15);
+  border-radius: 8px;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  /* background: transparent; */
+}
+
+/*-----module groups----*/
+.modules-right {
+  /* background-color: rgba(8,8,8,0.85); */
+  background: transparent;
+  margin: 0 -12px 0 0;
+  border-radius: 20px;
+  color: #989483;
+}
+
+.modules-center {
+  background: transparent;
+  margin: 0 0 0 0;
+  border-radius: 20px;
+  color: #989483;
+}
+
+.modules-left {
+  background: transparent;
+  margin: 0 0 0 -12px;
+  border-radius: 20px;
+}
+
+tooltip {
+  background: #323437;
+  color: #989483;
+  border-radius: 12px;
+}
+
+#workspaces {
+  padding: 0 14px;
+}
+
+#workspaces button {
+  padding: 1px 5px;
+  background: transparent;
+  color: #4c566a;
+}
+
+#workspaces button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
+  color: #989483;
+}
+
+#workspaces button.active {
+  /* color: #BC83E3; */
+  color: #989483;
+  transition: all 0.2s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#workspaces button.urgent {
+  color: #11111b;
+  background: #5d4e75;
+  border-radius: 10px;
+}
+
+#custom-sep {
+  color: #313244;
+  font-size: 18px;
+}
+
+#window {
+  color: #989483;
+  font-family: JetbrainsMono Nerd Font;
+  font-size: 10;
+}
+
+#custom-recorder {
+  font-size: 10px;
+  margin: 2px 7px 0px 7px;
+}
+
+#clock {
+  margin: 2px 0 0 0;
+  padding: 2px;
+  border-radius: 10px;
+  font-family: JetbrainsMono Nerd Font;
+}
+
+#battery,
+#cpu,
+#memory,
+#temperature,
+#network #pulseaudio,
+#tray,
+#mode,
+#custom-power,
+#custom-menu,
+#idle_inhibitor {
+  padding: 0 5px;
+}
+
+#mode {
+  color: #cc3436;
+  font-weight: bold;
+}
+
+/*-----Indicators----*/
+#network.disconnected {
+  color: #ff5454;
+}
+
+#network.disabled {
+  color: #e3c78a;
+}
+
+#idle_inhibitor.activated {
+  color: #2dcc36;
+}
+
+#backlight-slider slider,
+#pulseaudio-slider slider {
+  background: #a1bdce;
+  background-color: transparent;
+  box-shadow: none;
+  margin-right: 7px;
+}
+
+#backlight-slider trough,
+#pulseaudio-slider trough {
+  min-width: 90px;
+  min-height: 10px;
+  border-radius: 8px;
+  background: #343434;
+}
+
+#backlight-slider highlight,
+#pulseaudio-slider highlight {
+  border-radius: 8px;
+  background-color: #5d4e75;
+}
+
+#pulseaudio.muted {
+  color: #e3c78a;
+}
+
+#battery.charging {
+  color: #8cc85f;
+}
+
+#battery.warning:not(.charging) {
+  color: #e3c78a;
+}
+
+#battery.critical:not(.charging) {
+  color: #ff5454;
+}

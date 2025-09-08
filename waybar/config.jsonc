@@ -30,11 +30,11 @@
 		"network",
 		"custom/sep",
     "cpu",
-		"custom/space"
+		// "custom/space",
 		// "custom/sep",
 		// "battery",
-		// "custom/sep",
-		// "custom/session",
+		"custom/sep",
+		"custom/session"
 		// "custom/space"
 	],
 	"custom/sep": {
@@ -107,7 +107,7 @@
 		},
 		"toolip": true,
 		// "on-click": "wlogout -p layer-shell"
-		"on-click": "shutdown"
+		"on-click": "shutdown -h now"
 	},
 	"backlight": {
 		// "format": "{percent}% {icon} ",

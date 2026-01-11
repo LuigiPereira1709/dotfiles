@@ -58,6 +58,12 @@ alias dcu='docker-compose up -d'
 alias dcd='docker-compose down -v'
 alias dcl='docker-compose logs -f'
 
+# Lazygit
+alias lz='lazygit'
+
+# Yazi
+alias y='yazi'
+
 ## ALIAS ##
 
 

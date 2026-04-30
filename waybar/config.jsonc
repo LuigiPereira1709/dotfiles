@@ -7,7 +7,6 @@
   "gtk-layer-shell": true,
   "height": 30,
   "reload_style_on_change": true,
-
   "modules-left": [
     "custom/menu",
     "custom/screenrecord",
@@ -23,7 +22,6 @@
     "clock",
     "custom/notification"
   ],
-
   "modules-right": [
     "custom/cava",
     "tray",
@@ -35,10 +33,9 @@
     "power-profiles-daemon",
     "custom/power-menu"
   ],
-
   "include": [
     "~/.config/waybar/modules/left.jsonc",
     "~/.config/waybar/modules/center.jsonc",
     "~/.config/waybar/modules/right.jsonc"
-  ] 
+  ]
 }

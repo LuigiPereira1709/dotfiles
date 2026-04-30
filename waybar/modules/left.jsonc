@@ -7,7 +7,6 @@
     "menu-actions": {
       "update_system": "kitty sh -c 'sudo pacman -Syu; exec zsh'",
       "exit": "notify-send 'Exiting Hyprland in 5sec' && sleep 5 && hyprctl dispatch exit",
-
       "record_region": "~/.config/waybar/scripts/screenrecord region",
       "record_monitor": "~/.config/waybar/scripts/screenrecord monitor",
       "record_window": "~/.config/waybar/scripts/screenrecord window",
@@ -38,7 +37,11 @@
       "headset": "",
       "phone": "",
       "portable": "",
-      "default": ["", "", ""]
+      "default": [
+        "",
+        "",
+        ""
+      ]
     }
   },
   "pulseaudio#microphone": {
@@ -52,10 +55,13 @@
     "on-scroll-down": "wpctl set-volume @DEFAULT_SOURCE@ 1%-",
     "scroll-step": 1
   },
-
   "backlight": {
     "format": "{icon} {percent}%",
-    "format-icons": ["󰃞", "󰃟", "󰃠"],
+    "format-icons": [
+      "󰃞",
+      "󰃟",
+      "󰃠"
+    ],
     "on-scroll-up": "brightnessctl set 1%+",
     "on-scroll-down": "brightnessctl set 1%-",
     "min-length": 6

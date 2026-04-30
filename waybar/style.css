@@ -7,80 +7,82 @@
 @define-color inactive_color rgba(205, 214, 244, 0.1);
 
 * {
-  font-family: "JetBrainsMono Nerd Font";
-  font-size: 10px;
-  min-height: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 10px;
+    min-height: 0;
 }
 
 window#waybar {
-  color: @text;
-  background: transparent;
+    color: @text;
+    background: transparent;
 }
 
 tooltip {
-  background: @base;
-  border-radius: 12px;
+    background: @base;
+    border-radius: 12px;
 }
 
 #workspaces {
-  background: @base;
-  border-radius: 16px 0 0 16px;
-  margin: 3px 0 3px 0;
-  padding: 0 3px 0 4px;
+    background: @base;
+    border-radius: 16px 0 0 16px;
+    margin: 3px 0 3px 0;
+    padding: 0 3px 0 4px;
 }
 
 #workspaces button {
-  padding: 0;
-  color: @text;
-  margin: 2px 2px 2px 0;
-  background: @inactive_color;
-  border: 1px solid transparent;
-  border-radius: 16px;
-  padding: 0 0 0 7px;
+    padding: 0;
+    color: @text;
+    margin: 2px 2px 2px 0;
+    background: @inactive_color;
+    border: 1px solid transparent;
+    border-radius: 16px;
+    padding: 0 0 0 7px;
 }
 
 #workspaces button.active {
-  color: @text;
-  background: @active_color;
-  margin: 2px 2px 2px 0;
-  border-radius: 16px;
-  border: 1px solid @active_color;
-  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: @text;
+    background: @active_color;
+    margin: 2px 2px 2px 0;
+    border-radius: 16px;
+    border: 1px solid @active_color;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #workspaces button.empty {
-  background: @inactive_color;
-  padding: 0 4px;
-  border-radius: 16px;
+    background: @inactive_color;
+    padding: 0 4px;
+    border-radius: 16px;
 }
 
 #workspaces button:hover {
-  background: @hover_color;
-  color: @text;
+    background: @hover_color;
+    color: @text;
 }
 
 #power-profiles-daemon {
-  border: 0;
-  border-radius: 0;
+    border: 0;
+    border-radius: 0;
 }
 
 #power-profiles-daemon.performance {
-  color: @red_bright;
+    color: @red_bright;
 }
+
 #power-profiles-daemon.balanced {
-  color: @orange_bright;
+    color: @orange_bright;
 }
+
 #power-profiles-daemon.power-saver {
-  color: @green_bright;
+    color: @green_bright;
 }
 
 #custom-power-menu {
-  color: @text;
-  background: @base;
-  border-radius: 0 16px 16px 0;
-  padding: 0 15px 0 8px;
-  margin: 3px 10px 3px 0;
-  font-size: 16px;
+    color: @text;
+    background: @base;
+    border-radius: 0 16px 16px 0;
+    padding: 0 15px 0 8px;
+    margin: 3px 10px 3px 0;
+    font-size: 16px;
 }
 
 #custom-keypress,
@@ -101,131 +103,137 @@ tooltip {
 #memory,
 #custom-tlp,
 #custom-fanctl {
-  background: @base;
-  padding: 0 10px;
-  margin: 3px 0;
+    background: @base;
+    padding: 0 10px;
+    margin: 3px 0;
 }
 
 #clock {
-  background: @base;
-  color: @peach_bright;
-  margin: 3px 0;
-  padding-left: 8px;
+    background: @base;
+    color: @peach_bright;
+    margin: 3px 0;
+    padding-left: 8px;
 }
 
 #custom-notification {
-  background: @base;
-  margin: 3px 0;
-  padding: 0 8px 0 6px;
-  border-radius: 0 16px 16px 0;
+    background: @base;
+    margin: 3px 0;
+    padding: 0 8px 0 6px;
+    border-radius: 0 16px 16px 0;
 }
 
 #temperature.critical {
-  color: @text;
+    color: @text;
 }
 
 #tray {
-  border-radius: 16px 0 0 16px;
+    border-radius: 16px 0 0 16px;
 }
 
 #custom-menu {
-  color: @text;
-  background: @base;
-  border-radius: 16px 0 0 16px;
-  padding: 0 8px;
-  margin: 3px 0 3px 10px;
-  font-size: 16px;
+    color: @text;
+    background: @base;
+    border-radius: 16px 0 0 16px;
+    padding: 0 8px;
+    margin: 3px 0 3px 10px;
+    font-size: 16px;
 }
 
 menu {
-  border-radius: 15px;
-  background: @base;
-  color: @text;
-  padding: 2px;
+    border-radius: 15px;
+    background: @base;
+    color: @text;
+    padding: 2px;
 }
 
 menuitem {
-  border-radius: 15px;
-  margin: 3px 2px;
+    border-radius: 15px;
+    margin: 3px 2px;
 }
 
 #custom-screenrecord {
-  border-radius: 0;
-  margin: 3px 0;
+    border-radius: 0;
+    margin: 3px 0;
 }
 
 #custom-screenrecord.recording {
-  background: @base;
-  color: @text;
-  font-weight: bold;
-  animation: pulse 5s infinite;
+    background: @base;
+    color: @text;
+    font-weight: bold;
+    animation: pulse 5s infinite;
 }
 
 #custom-screenrecord.recording:hover {
-  background: @base;
+    background: @base;
 }
 
 @keyframes pulse {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 #custom-cava {
-  border-radius: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 #custom-cava.idle {
-  color: @text;
-  border-radius: 0 20px 20px 0;
-  padding: 3px;
-  margin: 3px 0;
+    color: @text;
+    border-radius: 0 20px 20px 0;
+    padding: 3px;
+    margin: 3px 0;
 }
 
 #custom-mpris {
-  color: @text;
-  border-radius: 0 20px 20px 0;
-  /* padding: 3px; */
-  margin: 3px 0;
+    color: @text;
+    border-radius: 0 20px 20px 0;
+    /* padding: 3px; */
+    margin: 3px 0;
 }
 
 #window {
-  border-radius: 16px;
-  margin: 3px 10px;
+    border-radius: 16px;
+    margin: 3px 10px;
 }
 
 #network {
-  color: @text;
+    color: @text;
 }
+
 #bluetooth {
-  color: @text;
+    color: @text;
 }
+
 #pulseaudio {
-  color: @text;
+    color: @text;
 }
+
 #pulseaudio.microphone {
-  color: @text;
+    color: @text;
 }
+
 #battery {
-  color: @text;
+    color: @text;
 }
 
 #custom-weather {
-  border-radius: 0;
-  margin: 3px 0;
-  padding-left: 8px;
-  background: @base;
+    border-radius: 0;
+    margin: 3px 0;
+    padding-left: 8px;
+    background: @base;
 }
 
 #cpu,
 #memory {
-  border-radius: 0;
+    border-radius: 0;
 }

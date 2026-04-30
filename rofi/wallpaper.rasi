@@ -1,0 +1,89 @@
+configuration {
+	display-drun: "󰸉";
+	font: "Iosevka Nerd Font Regular 12";
+    show-icons: true;
+}
+
+@import "colors"
+
+* {
+    background-color: @transparent;
+}
+
+window {
+	fullscreen: true;
+	background-color: black/70%;
+    border-color: @transparent;
+	padding: 10% 15% 10% 15%;
+}
+
+mainbox {
+    background-color: @transparent;
+}
+
+inputbar {
+	background-color: @transparent;
+	text-color: @fg;
+    children: [prompt, entry];
+}
+
+prompt {
+	background-color: @transparent;
+	text-color: @gold;
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	border: 0;
+}
+
+entry {
+	background-color: @transparent;
+	text-color: @gold;
+	placeholder: "Search Wallpapers";
+	padding: 0.7em 0 0.7em 2;
+	border: 0;
+}
+
+listview {
+	background-color: @transparent;
+	cycle: true;
+    scrollbar: false;
+	dynamic: true;
+	padding: 20px 20px 20px 20px;
+	border: 0 0 0 0;
+	columns: 4;
+	spacing: 20px;
+    fixed-columns: true;
+}
+
+element {
+	padding: 20px;
+	border: 0;
+    orientation: vertical;
+    border-radius: 12px;
+}
+
+element-icon {
+    size: 200px;
+    horizontal-align: 0.5;
+    background-color: @transparent;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    text-color: inherit;
+    background-color: transparent;
+}
+
+element.normal.normal {
+    background-color: @transparent;
+    text-color: @gold;
+}
+
+element.selected.normal {
+    background-color: @gold;
+    text-color: @bg;
+}
+
+element.alternate.normal {
+    background-color: @transparent;
+    text-color: @gold;
+}
